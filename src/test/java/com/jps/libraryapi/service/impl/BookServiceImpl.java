@@ -1,6 +1,6 @@
 package com.jps.libraryapi.service.impl;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -24,6 +24,16 @@ public class BookServiceImpl implements BookService {
 			throw new BusinessException("Isbn já cadastrado");
 		}
 		return repository.save(book);
+	}
+
+	@Override
+	public Optional<Book> getBookByID(int id) {
+		return Optional.empty();
+	}
+
+	@Override
+	public void delete(Book book) {
+		
 	}
 
 }
